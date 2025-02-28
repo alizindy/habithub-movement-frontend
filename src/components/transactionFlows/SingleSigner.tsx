@@ -20,6 +20,8 @@ const initialCampaignData: CreateCampaignData = {
   rewardPool: 3000,
   rewardPerSubmit: 300,
   maxParticipant: 10,
+  dataType: "Image",
+  dataValidateType: "Shopping Receipt",
 };
 
 export function SingleSigner() {
@@ -70,6 +72,8 @@ export function SingleSigner() {
         rewardPool: campaign.rewardPool,
         rewardPerSubmit: campaign.rewardPerSubmit,
         maxParticipant: campaign.maxParticipant,
+        dataType: campaign.dataType,
+        dataValidateType: campaign.dataValidateType,
       }));
       await aptosClient(network).waitForTransaction({
         transactionHash: response.hash,
